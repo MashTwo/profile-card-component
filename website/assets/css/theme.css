@@ -2,3 +2,132 @@
 *   Design by Frontend mentor (frontendmentor.io)
 *   Code by Ashley Bradley (ashleybradley.co.uk)
 */
+
+/*
+*   Variables
+*/
+:root {
+    /* Colours : Primary */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-blue: hsl(229, 23%, 23%);
+    --grayish-blue: hsl(227, 10%, 46%);
+
+    /* Colours : Neutral */
+    --dark-gray: hsl(0, 0%, 59%);
+    --light-gray: hsl(0, 0%, 79%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/*
+*   Globals
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1.125rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: url('../images/bg-pattern-top.svg') left 0em top -20em no-repeat, 
+                url('../images/bg-pattern-bottom.svg') right -5em bottom -20em no-repeat,
+                var(--dark-cyan);
+}
+
+@media (max-width: 48em) {
+    body {
+        background: url('../images/bg-pattern-top.svg') left -35em top -30em no-repeat, 
+                url('../images/bg-pattern-bottom.svg') right -30em bottom -30em no-repeat,
+                var(--dark-cyan);
+    }
+}
+
+/*
+*   Typography
+*/
+h1 {
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+h1,
+.figure {
+    color: var(--very-dark-blue);
+}
+
+.name, 
+.age {
+    display: inline-block;
+}
+
+.age, 
+.location,
+.figure-name {
+    color: var(--grayish-blue);
+}
+
+.name {
+    margin-right: 1rem;
+}
+
+.location {
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+}
+
+.figure-name {
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+
+/*
+*   Structure
+*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 1rem;
+    height: 374px;
+    width: 350px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.4);
+}
+
+.profile-banner {
+    background-image: url('../images/bg-pattern-card.svg');
+    height: 140px;
+    width: 350px;
+}
+
+.profile {
+    position: relative;
+    height: 200px;
+}
+
+.profile-image {
+    margin: -3.5rem 0 1rem;
+}
+
+.profile-image img {
+    border: 5px solid var(--white);
+    border-radius: 50%;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid var(--light-gray);
+    height: 89px;
+}
